@@ -1,0 +1,30 @@
+<div class="container custom-container">
+  <div class="col-md-12">
+    <h3 class="mb-3 text-center">Create Contact</h3>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="contact.firstName" class="form-control" placeholder="First Name">
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="contact.lastName" class="form-control" placeholder="Last Name">
+    </div>
+    <div class="form-group">
+      <input type="email" [(ngModel)]="contact.email" class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="contact.phoneNumber" class="form-control" placeholder="Phone Number">
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="contact.twitter" class="form-control" placeholder="Twitter">
+    </div>
+    <div class="form-group">
+      <input type="text" [(ngModel)]="contact.skype" class="form-control" placeholder="Skype">
+    </div>
+    <div class="form-group">
+      <input type="file" class="form-control" (change)="onSelectedFile($event)" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-secondary btn-lg btn-block" (click)="back()">Go back</button>
+      <button class="btn btn-success btn-lg btn-block" (click)="createContact()">Create contact</button>
+    </div>
+  </div>
+</div>
