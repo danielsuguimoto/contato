@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Email;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
@@ -41,6 +43,7 @@ public class Contact {
     }
 
     @Column(name = "first_name", nullable = false)
+    @NotNull(message = "First name is required")
     public String getFirstName() {
         return firstName;
     }
@@ -49,6 +52,7 @@ public class Contact {
     }
  
     @Column(name = "last_name", nullable = false)
+    @NotNull(message = "Last name is required")
     public String getLastName() {
         return lastName;
     }
@@ -57,6 +61,7 @@ public class Contact {
     }
 
     @Column(name = "email_address", nullable = false)
+    @Email(message = "Email must be valid")
     public String getEmail() {
         return email;
     }
@@ -65,6 +70,7 @@ public class Contact {
     }
  
     @Column(name = "phone_number", nullable = false)
+    @NotNull(message = "Phone number is required")
     public String getPhoneNumber() {
         return phoneNumber;
     }
